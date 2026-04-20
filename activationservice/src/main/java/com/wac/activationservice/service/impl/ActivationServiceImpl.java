@@ -36,7 +36,7 @@ public class ActivationServiceImpl implements ActivationService {
 	}
 
 	@Override
-	public ActivationRequest scheduleActivation(ActivationRequestDTO dto) {
+	public  ActivationRequest scheduleActivation(ActivationRequestDTO dto) {
 		
 		if (dto.getScheduledAt().isBefore(LocalDateTime.now())) {
 	        throw new InvalidActivationException("Scheduled time must be in the future");
